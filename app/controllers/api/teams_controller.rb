@@ -13,11 +13,6 @@ class Api::V1::TeamsController < ApplicationController
     render json: team
   end
 
-  # GET /teams/new
-  def new
-    @team = Team.new
-  end
-
   # POST /teams or /teams.json
   def create
     @team = Team.create(team_params)

@@ -12,21 +12,32 @@
 
 ActiveRecord::Schema[7.0].define(version: 2023_02_25_160859) do
   create_table "games", force: :cascade do |t|
+    t.integer "home_team"
+    t.integer "away_team"
+    t.string "final_score"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "players", force: :cascade do |t|
+    t.string "name"
+    t.integer "team_id"
+    t.integer "number"
+    t.string "position"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "playoff_brackets", force: :cascade do |t|
+    t.integer "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "teams", force: :cascade do |t|
+    t.string "name"
+    t.string "conference"
+    t.string "division"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -35,6 +46,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_02_25_160859) do
     t.string "name"
     t.string "password"
     t.string "photo"
+    t.integer "playoff_bracket_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
