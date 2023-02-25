@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Playoff brackets</h1>
+
+<div id="playoff_brackets">
+  <% @playoff_brackets.each do |playoff_bracket| %>
+    <%= render playoff_bracket %>
+    <p>
+      <%= link_to "Show this playoff bracket", playoff_bracket %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New playoff bracket", new_playoff_bracket_path %>

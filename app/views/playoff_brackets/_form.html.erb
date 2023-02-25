@@ -1,0 +1,17 @@
+<%= form_with(model: playoff_bracket) do |form| %>
+  <% if playoff_bracket.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(playoff_bracket.errors.count, "error") %> prohibited this playoff_bracket from being saved:</h2>
+
+      <ul>
+        <% playoff_bracket.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @playoff_bracket %>
+
+<div>
+  <%= link_to "Edit this playoff bracket", edit_playoff_bracket_path(@playoff_bracket) %> |
+  <%= link_to "Back to playoff brackets", playoff_brackets_path %>
+
+  <%= button_to "Destroy this playoff bracket", @playoff_bracket, method: :delete %>
+</div>

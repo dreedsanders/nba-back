@@ -1,0 +1,2 @@
+class PlayoffBracket < ApplicationRecord
+end
