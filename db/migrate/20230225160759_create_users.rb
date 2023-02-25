@@ -4,6 +4,7 @@ class CreateUsers < ActiveRecord::Migration[7.0]
       t.string :name
       t.string :password
       t.string :photo
+      t.integer :playoff_bracket_id
 
       t.timestamps
     end

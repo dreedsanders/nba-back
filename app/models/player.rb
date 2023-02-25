@@ -1,6 +1,7 @@
 class Player < ApplicationRecord
     belongs_to :team
     has_many :games
+    validates :name :team :position presence: true
 
     def careeraverage
         #return average of all game stats

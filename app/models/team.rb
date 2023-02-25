@@ -1,7 +1,8 @@
 class Team < ApplicationRecord
     has_many :players
     has_many :games
-    has_many :playoffbrackets 
+    has_many :playoffbrackets
+    validates :name :conference :division presence: true
 
     def roster
         #return a list of teams players

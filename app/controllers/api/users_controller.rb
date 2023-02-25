@@ -1,4 +1,4 @@
-class UsersController < ApplicationController
+class Api::V1::UsersController < ApplicationController
   before_action :set_user, only: %i[ show edit update destroy ]
 
   # GET /users or /users.json
@@ -8,6 +8,8 @@ class UsersController < ApplicationController
 
   # GET /users/1 or /users/1.json
   def show
+    user = User.find(params[:id])
+    render json: user
   end
 
   # GET /users/new
@@ -15,20 +17,22 @@ class UsersController < ApplicationController
     @user = User.new
   end
 
-  # GET /users/1/edit
-  def edit
-  end
-
   # POST /users or /users.json
   def create
+    @user = User.create(user_params)
+    render json: @user
   end
 
   # PATCH/PUT /users/1 or /users/1.json
   def update
+    user = User.find(params[:id])
+    user.update(:name params[:name], :password params[:password], :photo params[:photo])
   end
 
   # DELETE /users/1 or /users/1.json
   def destroy
+    user = User.find(params[:id])
+    user.destroy
   end
 
   private
