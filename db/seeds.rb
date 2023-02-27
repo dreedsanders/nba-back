@@ -1,3 +1,8 @@
+#rapidapi has a free nba stats api to get statistics from 
+
+
+
+
 Game.destroy_all
 PlayoffBracket.destroy_all
 User.destroy_all

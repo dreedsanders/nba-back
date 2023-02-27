@@ -5,7 +5,10 @@ class Team < ApplicationRecord
 
 
     def roster
-        #return a list of teams players
+=begin
+players = Players.map{|player| player.team.name = self.name}
+return players
+=end
     end
 
     def record
