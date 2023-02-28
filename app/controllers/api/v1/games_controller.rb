@@ -26,7 +26,7 @@ class Api::V1::GamesController < ApplicationController
   # PATCH/PUT /games/1 or /games/1.json
   def update
    game = Game.find(params[:id])
-   game.update(home_team: params[:home_team], away_team: params[:away_team], final_score: params[:final_score] )
+  #  game.update(home_team: params[:home_team], away_team: params[:away_team], final_score: params[:final_score] )
     render json:game
   end
 

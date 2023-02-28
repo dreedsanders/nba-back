@@ -3,8 +3,8 @@ class Api::V1::UsersController < ApplicationController
 
   # GET /users or /users.json
   def index
-    @users = User.all
-    render json: @users
+    users = User.all
+    render json: users
   end
 
   # GET /users/1 or /users/1.json
@@ -27,7 +27,7 @@ class Api::V1::UsersController < ApplicationController
   # PATCH/PUT /users/1 or /users/1.json
   def update
     user = User.find(params[:id])
-    user.update(:name params[:name], :password params[:password], :photo params[:photo])
+    # user.update(:name params[:name], :password params[:password], :photo params[:photo])
   end
 
   # DELETE /users/1 or /users/1.json

@@ -26,7 +26,7 @@ class Api::V1::PlayersController < ApplicationController
   # PATCH/PUT /players/1 or /players/1.json
   def update
     player = Player.find(params[:id])
-    player.update(:name params[:name],:team params[:team], :number params[:number], :position params[:position])
+    # player.update(:name params[:name],:team params[:team], :number params[:number], :position params[:position])
   end
 
   # DELETE /players/1 or /players/1.json

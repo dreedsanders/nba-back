@@ -22,7 +22,7 @@ class Api::V1::TeamsController < ApplicationController
   # PATCH/PUT /teams/1 or /teams/1.json
   def update
     team = Team.find(params[:id])
-    team.update(:name params[:name], :conference params[:conference], :division params[:division])
+    # team.update(:name params[:name], :conference params[:conference], :division params[:division])
   end
 
   # DELETE /teams/1 or /teams/1.json

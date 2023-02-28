@@ -26,7 +26,7 @@ class Api::V1::PlayoffBracketsController < ApplicationController
   # PATCH/PUT /playoff_brackts/1 or /playoff_brackts/1.json
   def update
     playoff_bracket = PlayoffBracket.find(params[:id])
-    playoff_bracket.update(:user_id params[:user_id], :teams params[:teams])
+    # playoff_bracket.update(:user_id params[:user_id], :teams params[:teams])
   end
 
   # DELETE /playoff_brackts/1 or /playoff_brackts/1.json
