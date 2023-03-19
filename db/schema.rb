@@ -44,7 +44,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_02_25_160859) do
 
   create_table "users", force: :cascade do |t|
     t.string "name"
-    t.string "password"
+    t.string "password_digest"
     t.string "photo"
     t.integer "playoff_bracket_id"
     t.datetime "created_at", null: false

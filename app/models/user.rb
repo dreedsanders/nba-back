@@ -1,5 +1,8 @@
 class User < ApplicationRecord
+    has_secure_password
     has_one :playoff_bracket
+    validates :name, uniqueness: true, presence: true
+    validates :password, presence: true
 
     def myteam
 =begin

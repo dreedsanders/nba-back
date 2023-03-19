@@ -19,8 +19,6 @@ module NbaMockBack
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 7.0
     config.api_only = true
-    config.exceptions_app = self.routes
-    # config.autoload_paths += %W(#{config.root}/lib) #does this help with unitialized api::v1?
 
     # Configuration for the application, engines, and railties goes here.
     #

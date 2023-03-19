@@ -15,5 +15,7 @@ A player will have a team, position, and a jersey number
 
 A playoff bracket will have a user, teams, winner, and a runner up. 
 
+Subscribed to the nba rapidapi. Will work on getting stats fetched and organized next. 
+
 
 The views for this application will be handled using React. 

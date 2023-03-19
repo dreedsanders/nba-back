@@ -7,6 +7,7 @@ Rails.application.routes.draw do
       resources :games
       resources :teams
       resources :users
+      post "/login", to: "auth#login"
     end
   end
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
